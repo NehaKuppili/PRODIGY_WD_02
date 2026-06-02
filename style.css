@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #1e293b 40%,
+    #312e81 100%
+);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.stopwatch-card{
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 450px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+transition: 0.3s ease;
+}
+
+.stopwatch-card:hover{
+    transform: translateY(-5px);
+}
+
+
+.app-title{
+    color: white;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.subtitle{
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 25px;
+    font-size: 0.9rem;
+}
+
+.time-display{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.4);
+}
+
+.button-group{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+button{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.start-btn{
+    background: #22c55e;
+    color: white;
+}
+
+.pause-btn{
+    background: #f59e0b;
+    color: white;
+}
+
+.reset-btn{
+    background: #ef4444;
+    color: white;
+}
+
+button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255,255,255,0.2);
+}
+
+.lap-btn{
+    background: #3b82f6;
+    color: white;
+}
+
+#lapList{
+    margin-top: 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+#lapList p{
+    color: white;
+    background: rgba(255,255,255,0.08);
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 4px solid #3b82f6;
+    font-weight: 500;
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+#lapList p:hover{
+    background: rgba(255,255,255,0.15);
+    transform: translateX(5px);
+}
+
+#lapList::-webkit-scrollbar{
+    width: 6px;
+}
+
+#lapList::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+}
+
+@media (max-width: 500px){
+
+    .stopwatch-card{
+        width: 90%;
+        padding: 25px;
+    }
+
+    .app-title{
+        font-size: 2rem;
+    }
+
+    .time-display{
+        font-size: 2rem;
+    }
+
+    .button-group{
+        gap: 10px;
+    }
+
+    button{
+        width: 100%;
+    }
+
+}
+
+.footer-text{
+    margin-top: 20px;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
